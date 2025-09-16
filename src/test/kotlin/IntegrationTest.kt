@@ -9,6 +9,10 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
+import org.springframework.boot.test.mock.mockito.MockBean
+import org.mockito.kotlin.whenever
+
+import es.unizar.webeng.hello.service.GreetingService
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class IntegrationTest {
@@ -17,6 +21,9 @@ class IntegrationTest {
 
     @Autowired
     private lateinit var restTemplate: TestRestTemplate
+
+    @MockBean
+    private lateinit var greetingService: GreetingService
 
     @Test
     fun `should return home page with modern title and client-side HTTP debug`() {
@@ -30,20 +37,34 @@ class IntegrationTest {
     }
 
     @Test
-    fun `should return personalized greeting when name is provided`() {
+    fun `should return personalized morning greeting`() {
+        whenever(greetingService.getGreeting()).thenReturn("Good Morning")
+
         val response = restTemplate.getForEntity("http://localhost:$port?name=Developer", String::class.java)
-        
+
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(response.body).contains("Hello, Developer!")
+        assertThat(response.body).contains("Good Morning, Developer!")
     }
 
     @Test
-    fun `should return API response with timestamp`() {
+    fun `should return personalized evening greeting`() {
+        whenever(greetingService.getGreeting()).thenReturn("Good Evening")
+
+        val response = restTemplate.getForEntity("http://localhost:$port/?name=Test", String::class.java)
+
+        assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
+        assertThat(response.body).contains("Good Evening, Test!")
+    }
+
+    @Test
+    fun `should return API response with timestamp and afternoon greeting`() {
+        whenever(greetingService.getGreeting()).thenReturn("Good Afternoon")
+        
         val response = restTemplate.getForEntity("http://localhost:$port/api/hello?name=Test", String::class.java)
         
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
         assertThat(response.headers.contentType).isEqualTo(MediaType.APPLICATION_JSON)
-        assertThat(response.body).contains("Hello, Test!")
+        assertThat(response.body).contains("Good Afternoon, Test!")
         assertThat(response.body).contains("timestamp")
     }
 
