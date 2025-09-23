@@ -29,6 +29,8 @@ dependencies {
     implementation(libs.jackson.module.kotlin)
     implementation(libs.spring.boot.starter.data.jpa)
     implementation("org.springframework.security:spring-security-crypto")
+    implementation("com.bucket4j:bucket4j-core:8.10.1")
+    implementation("com.github.ben-manes.caffeine:caffeine:3.1.8")
     runtimeOnly(libs.h2)
 
     testImplementation(libs.spring.boot.starter.test)

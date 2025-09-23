@@ -67,6 +67,14 @@
                 >
               </div>
 
+              <!-- Dinamic greeting -->
+              <div class="mt-4">
+                <button id="helloBtn" class="btn btn-success">Say Hello</button>
+
+                <!-- Response -->
+                <div id="helloResult" class="mt-3 alert d-none"></div>
+              </div>
+
               <div
                 th:if="${error}"
                 class="mt-3 alert alert-danger"
@@ -81,5 +89,36 @@
     <script
       th:src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"
     ></script>
+
+    <script th:inline="javascript">
+      document
+        .getElementById("helloBtn")
+        .addEventListener("click", async () => {
+          const username = /*[[${username}]]*/ 'Guest'; // Thymeleaf inject username
+          const resultDiv = document.getElementById("helloResult");
+
+          try {
+            const response = await fetch(`/api/hello?name=${username}`);
+
+            if (response.ok) {
+              const data = await response.json();
+              resultDiv.className = "mt-3 alert alert-success";
+              resultDiv.textContent = `✅ ${data.message} (at ${data.timestamp})`;
+            } else if (response.status === 429) {
+              const errorText = await response.text();
+              resultDiv.className = "mt-3 alert alert-danger";
+              resultDiv.textContent = `⚠️ ${errorText}`;
+            } else {
+              resultDiv.className = "mt-3 alert alert-warning";
+              resultDiv.textContent = `⚠️ Unexpected error: ${response.status}`;
+            }
+          } catch (err) {
+            resultDiv.className = "mt-3 alert alert-danger";
+            resultDiv.textContent = `❌ Request failed: ${err.message}`;
+          }
+
+          resultDiv.classList.remove("d-none");
+        });
+    </script>
   </body>
 </html>

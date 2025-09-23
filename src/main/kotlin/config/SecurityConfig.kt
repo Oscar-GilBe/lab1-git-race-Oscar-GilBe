@@ -1,4 +1,4 @@
-package es.unizar.webeng.hello
+package es.unizar.webeng.hello.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
