@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.kotlin.spring)
     alias(libs.plugins.spring.boot)
+    alias(libs.plugins.kotlin.jpa)
 }
 
 group = "es.unizar.webeng"
@@ -26,6 +27,10 @@ dependencies {
     developmentOnly(libs.spring.boot.devtools)
     implementation(libs.bootstrap)
     implementation(libs.jackson.module.kotlin)
+    implementation(libs.spring.boot.starter.data.jpa)
+    implementation("org.springframework.security:spring-security-crypto")
+    runtimeOnly(libs.h2)
+
     testImplementation(libs.spring.boot.starter.test)
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.mockito", module = "mockito-core")
