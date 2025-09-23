@@ -22,7 +22,7 @@ class HelloController(
         model: Model,
         @RequestParam(defaultValue = "") name: String
     ): String {
-        val greeting = if (name.isNotBlank()) "${greetingService.getGreeting(name)}, $name!" else message
+        val greeting = if (name.isNotBlank()) "${greetingService.getGreeting(name)}" else message
         model.addAttribute("message", greeting)
         model.addAttribute("name", name)
         return "welcome"
