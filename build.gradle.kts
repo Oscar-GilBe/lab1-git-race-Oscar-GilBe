@@ -38,6 +38,7 @@ dependencies {
         exclude(group = "org.mockito", module = "mockito-core")
     }
     testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
+    testImplementation("com.h2database:h2")
 }
 
 tasks.withType<Test> {
