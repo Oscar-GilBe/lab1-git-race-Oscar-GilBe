@@ -2,6 +2,7 @@ package es.unizar.webeng.hello
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import org.springframework.test.context.ActiveProfiles
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
@@ -15,6 +16,7 @@ import org.mockito.kotlin.whenever
 import es.unizar.webeng.hello.service.GreetingService
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("test")
 class IntegrationTest {
     @LocalServerPort
     private var port: Int = 0
