@@ -11,8 +11,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers.*
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 import org.springframework.boot.test.mock.mockito.MockBean
-import org.mockito.kotlin.whenever
+import org.mockito.Mockito.`when`
 
+import es.unizar.webeng.hello.delivery.controller.HelloController
+import es.unizar.webeng.hello.delivery.controller.HelloApiController
 import es.unizar.webeng.hello.service.GreetingService
 
 @WebMvcTest(HelloController::class, HelloApiController::class)
@@ -38,7 +40,7 @@ class HelloControllerMVCTests {
     
     @Test
     fun `should return home page with personalized message and good morning greeting`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Morning")
+        `when`(greetingService.getGreeting("Developer")).thenReturn("Good Morning, Developer!")
 
         mockMvc.perform(get("/").param("name", "Developer"))
             .andDo(print())
@@ -50,7 +52,7 @@ class HelloControllerMVCTests {
     
     @Test
     fun `should return API response as JSON`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Afternoon")
+        `when`(greetingService.getGreeting("Test")).thenReturn("Good Afternoon, Test!")
 
         mockMvc.perform(get("/api/hello").param("name", "Test"))
             .andDo(print())

@@ -38,7 +38,7 @@ class IntegrationTest {
 
     @Test
     fun `should return personalized morning greeting`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Morning")
+        whenever(greetingService.getGreeting("Developer")).thenReturn("Good Morning, Developer!")
 
         val response = restTemplate.getForEntity("http://localhost:$port?name=Developer", String::class.java)
 
@@ -48,7 +48,7 @@ class IntegrationTest {
 
     @Test
     fun `should return personalized evening greeting`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Evening")
+        whenever(greetingService.getGreeting("Test")).thenReturn("Good Evening, Test!")
 
         val response = restTemplate.getForEntity("http://localhost:$port/?name=Test", String::class.java)
 
@@ -58,7 +58,7 @@ class IntegrationTest {
 
     @Test
     fun `should return API response with timestamp and afternoon greeting`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Afternoon")
+        whenever(greetingService.getGreeting("Test")).thenReturn("Good Afternoon, Test!")
         
         val response = restTemplate.getForEntity("http://localhost:$port/api/hello?name=Test", String::class.java)
         

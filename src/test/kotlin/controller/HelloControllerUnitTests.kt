@@ -8,6 +8,8 @@ import org.springframework.ui.ExtendedModelMap
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 
+import es.unizar.webeng.hello.delivery.controller.HelloController
+import es.unizar.webeng.hello.delivery.controller.HelloApiController
 import es.unizar.webeng.hello.service.GreetingService
 
 class HelloControllerUnitTests {
@@ -33,7 +35,7 @@ class HelloControllerUnitTests {
     
     @Test
     fun `should return welcome view with personalized message and morning greeting`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Morning")
+        whenever(greetingService.getGreeting("Developer")).thenReturn("Good Morning, Developer!")
 
         val view = controller.welcome(model, "Developer")
         
@@ -44,7 +46,7 @@ class HelloControllerUnitTests {
     
     @Test
     fun `should return API response with timestamp and evening greeting`() {
-        whenever(greetingService.getGreeting()).thenReturn("Good Evening")
+        whenever(greetingService.getGreeting("Test")).thenReturn("Good Evening, Test!")
 
         val apiController = HelloApiController(greetingService)
         val response = apiController.helloApi("Test")
