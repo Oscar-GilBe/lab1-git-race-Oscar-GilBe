@@ -6,6 +6,7 @@ import io.github.bucket4j.Refill
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
+import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Component
 import org.springframework.web.filter.OncePerRequestFilter
 import com.github.benmanes.caffeine.cache.Caffeine
@@ -13,6 +14,7 @@ import java.time.Duration
 import java.util.concurrent.TimeUnit
 
 @Component
+@Profile("!test")
 class RateLimitFilter : OncePerRequestFilter() {
 
     // cache is a thread-safe map that associates a key (the client IP) with a Bucket4j Bucket
