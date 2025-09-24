@@ -14,7 +14,7 @@ import java.time.Duration
 import java.util.concurrent.TimeUnit
 
 @Component
-@Profile("!test")
+@Profile("!test", "ratelimiter")
 class RateLimitFilter : OncePerRequestFilter() {
 
     // cache is a thread-safe map that associates a key (the client IP) with a Bucket4j Bucket

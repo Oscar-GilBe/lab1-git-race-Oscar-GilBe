@@ -6,11 +6,15 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
+import org.springframework.test.context.ActiveProfiles
+import org.springframework.test.context.TestPropertySource
 import org.hamcrest.Matchers.containsString
 import org.springframework.http.HttpStatus
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@ActiveProfiles("test")
+@TestPropertySource(properties = ["spring.profiles.include=ratelimiter"])
 class RateLimitFilterTest(
     @Autowired val mockMvc: MockMvc
 ) {
