@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.spring)
     alias(libs.plugins.spring.boot)
     alias(libs.plugins.kotlin.jpa)
+    id("org.jetbrains.dokka") version "1.9.0"
 }
 
 group = "es.unizar.webeng"
@@ -47,4 +48,9 @@ tasks.withType<Test> {
 
 tasks.withType<BootRun> {
 	sourceResources(sourceSets["main"])
+}
+
+// Tarea para generar KDoc en HTML
+tasks.dokkaHtml {
+    outputDirectory.set(buildDir.resolve("dokka"))
 }
