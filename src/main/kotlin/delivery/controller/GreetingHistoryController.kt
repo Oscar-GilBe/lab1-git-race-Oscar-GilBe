@@ -41,7 +41,7 @@ class GreetingHistoryPageController(
     fun myHistory(@PathVariable username: String, model: Model, session: HttpSession): String {
         val sessionUser = session.getAttribute("username") as String?
         // Only allow watch one's own history, except admin
-        val role = session.getAttribute("role")?.toString() ?: "GUEST"
+        val role = session.getAttribute("role")?.toString() ?: "USER"
         if (sessionUser != username && role != "ADMIN") {
             model.addAttribute("error", "No tienes permiso para ver este historial")
             model.addAttribute("username", sessionUser ?: "anonymous")
@@ -59,7 +59,7 @@ class GreetingHistoryPageController(
 
     @GetMapping("/all")
     fun allUsersHistory(model: Model, session: HttpSession): String {
-        val role = session.getAttribute("role")?.toString() ?: "GUEST"
+        val role = session.getAttribute("role")?.toString() ?: "USER"
         val sessionUser = session.getAttribute("username") as String?
         
         if (role != "ADMIN") {

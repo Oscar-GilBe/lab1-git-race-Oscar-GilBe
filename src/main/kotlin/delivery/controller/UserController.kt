@@ -112,7 +112,7 @@ class AuthPageController(
         model: Model
     ): String {
         val username = session.getAttribute("username") as String?
-        val roleAttr = session.getAttribute("role")?.toString() ?: "GUEST"
+        val roleAttr = session.getAttribute("role")?.toString() ?: "USER"
 
         val safeUsername = username ?: "anonymous"
 
