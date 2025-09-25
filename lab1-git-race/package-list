@@ -1,0 +1,106 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:es.unizar.webeng.hello.config////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.config/index.html
+$dokka.location:es.unizar.webeng.hello.config/RateLimitFilter///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.config/-rate-limit-filter/index.html
+$dokka.location:es.unizar.webeng.hello.config/RateLimitFilter/RateLimitFilter/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.config/-rate-limit-filter/-rate-limit-filter.html
+$dokka.location:es.unizar.webeng.hello.config/SecurityConfig///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.config/-security-config/index.html
+$dokka.location:es.unizar.webeng.hello.config/SecurityConfig/SecurityConfig/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.config/-security-config/-security-config.html
+$dokka.location:es.unizar.webeng.hello.config/SecurityConfig/passwordEncoder/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.config/-security-config/password-encoder.html
+$dokka.location:es.unizar.webeng.hello.core.enum////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.core.enum/index.html
+$dokka.location:es.unizar.webeng.hello.core.enum/Role.ADMIN///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}lab1-git-race/es.unizar.webeng.hello.core.enum/-role/-a-d-m-i-n/index.html
+$dokka.location:es.unizar.webeng.hello.core.enum/Role.USER///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}lab1-git-race/es.unizar.webeng.hello.core.enum/-role/-u-s-e-r/index.html
+$dokka.location:es.unizar.webeng.hello.core.enum/Role///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.core.enum/-role/index.html
+$dokka.location:es.unizar.webeng.hello.core.enum/Role/entries/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.core.enum/-role/entries.html
+$dokka.location:es.unizar.webeng.hello.core.enum/Role/valueOf/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.core.enum/-role/value-of.html
+$dokka.location:es.unizar.webeng.hello.core.enum/Role/values/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.core.enum/-role/values.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO.Companion///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/-companion/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO.Companion/fromEntity/#es.unizar.webeng.hello.repository.entity.GreetingHistory/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/-companion/from-entity.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO/GreetingHistoryDTO/#kotlin.Long#kotlin.String#kotlin.String#kotlin.String?/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/-greeting-history-d-t-o.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO/id/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/id.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO/message/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/message.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO/timestamp/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/timestamp.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/GreetingHistoryDTO/username/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-greeting-history-d-t-o/username.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO.Companion///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/-companion/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO.Companion/fromEntity/#es.unizar.webeng.hello.repository.entity.User/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/-companion/from-entity.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO/UserDTO/#kotlin.Long#kotlin.String#es.unizar.webeng.hello.core.enum.Role/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/-user-d-t-o.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO/id/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/id.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO/role/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/role.html
+$dokka.location:es.unizar.webeng.hello.delivery.DTO/UserDTO/username/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.DTO/-user-d-t-o/username.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/AuthPageController/#es.unizar.webeng.hello.service.UserService#es.unizar.webeng.hello.service.GreetingService/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/-auth-page-controller.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/home/#jakarta.servlet.http.HttpSession#org.springframework.ui.Model/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/home.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/loginPage/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/login-page.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/loginUser/#kotlin.String#kotlin.String#jakarta.servlet.http.HttpSession#org.springframework.ui.Model/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/login-user.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/logout/#jakarta.servlet.http.HttpSession/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/logout.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/registerPage/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/register-page.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/AuthPageController/registerUser/#kotlin.String#kotlin.String#es.unizar.webeng.hello.core.enum.Role#jakarta.servlet.http.HttpSession#org.springframework.ui.Model/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-auth-page-controller/register-user.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryController///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryController/GreetingHistoryController/#es.unizar.webeng.hello.service.GreetingService/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-controller/-greeting-history-controller.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryController/getAllHistory/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-controller/get-all-history.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryController/getUserHistory/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-controller/get-user-history.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryPageController///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-page-controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryPageController/GreetingHistoryPageController/#es.unizar.webeng.hello.service.GreetingService/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-page-controller/-greeting-history-page-controller.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryPageController/allUsersHistory/#org.springframework.ui.Model#jakarta.servlet.http.HttpSession/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-page-controller/all-users-history.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryPageController/myHistory/#kotlin.String#org.springframework.ui.Model#jakarta.servlet.http.HttpSession/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-page-controller/my-history.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/GreetingHistoryPageController/redirectToMyHistory/#jakarta.servlet.http.HttpSession/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-greeting-history-page-controller/redirect-to-my-history.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/HelloApiController///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-hello-api-controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/HelloApiController/HelloApiController/#es.unizar.webeng.hello.service.GreetingService/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-hello-api-controller/-hello-api-controller.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/HelloApiController/helloApi/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-hello-api-controller/hello-api.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/HelloController///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-hello-controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/HelloController/HelloController/#es.unizar.webeng.hello.service.GreetingService#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-hello-controller/-hello-controller.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/HelloController/welcome/#org.springframework.ui.Model#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-hello-controller/welcome.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/index.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController/UserController/#es.unizar.webeng.hello.service.UserService/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/-user-controller.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController/createUser/#kotlin.String#kotlin.String#es.unizar.webeng.hello.core.enum.Role/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/create-user.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController/deleteUser/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/delete-user.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController/getAllUsers/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/get-all-users.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController/getUser/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/get-user.html
+$dokka.location:es.unizar.webeng.hello.delivery.controller/UserController/login/#kotlin.String#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.delivery.controller/-user-controller/login.html
+$dokka.location:es.unizar.webeng.hello.repository.entity////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/index.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/GreetingHistory///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-greeting-history/index.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/GreetingHistory/GreetingHistory/#kotlin.Long#kotlin.String#java.time.Instant#es.unizar.webeng.hello.repository.entity.User?/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-greeting-history/-greeting-history.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/GreetingHistory/id/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-greeting-history/id.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/GreetingHistory/message/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-greeting-history/message.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/GreetingHistory/timestamp/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-greeting-history/timestamp.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/GreetingHistory/user/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-greeting-history/user.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/User///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-user/index.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/User/User/#kotlin.Long#kotlin.String#kotlin.String#es.unizar.webeng.hello.core.enum.Role/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-user/-user.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/User/id/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-user/id.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/User/password/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-user/password.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/User/role/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-user/role.html
+$dokka.location:es.unizar.webeng.hello.repository.entity/User/username/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository.entity/-user/username.html
+$dokka.location:es.unizar.webeng.hello.repository////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository/index.html
+$dokka.location:es.unizar.webeng.hello.repository/GreetingHistoryRepository///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository/-greeting-history-repository/index.html
+$dokka.location:es.unizar.webeng.hello.repository/GreetingHistoryRepository/findByUser/#es.unizar.webeng.hello.repository.entity.User/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository/-greeting-history-repository/find-by-user.html
+$dokka.location:es.unizar.webeng.hello.repository/UserRepository///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository/-user-repository/index.html
+$dokka.location:es.unizar.webeng.hello.repository/UserRepository/findByUsername/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.repository/-user-repository/find-by-username.html
+$dokka.location:es.unizar.webeng.hello.service////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/index.html
+$dokka.location:es.unizar.webeng.hello.service/GreetingService///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-greeting-service/index.html
+$dokka.location:es.unizar.webeng.hello.service/GreetingService/GreetingService/#es.unizar.webeng.hello.repository.GreetingHistoryRepository#es.unizar.webeng.hello.repository.UserRepository#java.time.Clock/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-greeting-service/-greeting-service.html
+$dokka.location:es.unizar.webeng.hello.service/GreetingService/getAllHistory/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-greeting-service/get-all-history.html
+$dokka.location:es.unizar.webeng.hello.service/GreetingService/getGreeting/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-greeting-service/get-greeting.html
+$dokka.location:es.unizar.webeng.hello.service/GreetingService/getHistoryForUser/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-greeting-service/get-history-for-user.html
+$dokka.location:es.unizar.webeng.hello.service/UserService///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/index.html
+$dokka.location:es.unizar.webeng.hello.service/UserService/UserService/#es.unizar.webeng.hello.repository.UserRepository#org.springframework.security.crypto.password.PasswordEncoder/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/-user-service.html
+$dokka.location:es.unizar.webeng.hello.service/UserService/createUser/#kotlin.String#kotlin.String#es.unizar.webeng.hello.core.enum.Role/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/create-user.html
+$dokka.location:es.unizar.webeng.hello.service/UserService/deleteUser/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/delete-user.html
+$dokka.location:es.unizar.webeng.hello.service/UserService/getAllUsers/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/get-all-users.html
+$dokka.location:es.unizar.webeng.hello.service/UserService/getUser/#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/get-user.html
+$dokka.location:es.unizar.webeng.hello.service/UserService/validatePassword/#kotlin.String#kotlin.String/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello.service/-user-service/validate-password.html
+$dokka.location:es.unizar.webeng.hello////PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello/index.html
+$dokka.location:es.unizar.webeng.hello//main/#kotlin.Array[kotlin.String]/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello/main.html
+$dokka.location:es.unizar.webeng.hello/Application///PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello/-application/index.html
+$dokka.location:es.unizar.webeng.hello/Application/Application/#/PointingToDeclaration/lab1-git-race/es.unizar.webeng.hello/-application/-application.html
+es.unizar.webeng.hello
+es.unizar.webeng.hello.config
+es.unizar.webeng.hello.core.enum
+es.unizar.webeng.hello.delivery.DTO
+es.unizar.webeng.hello.delivery.controller
+es.unizar.webeng.hello.repository
+es.unizar.webeng.hello.repository.entity
+es.unizar.webeng.hello.service
+
