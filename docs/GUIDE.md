@@ -132,6 +132,7 @@ The application includes Docker support optimized for development with live relo
    ```bash
    docker build -f Dockerfile.dev -t modern-web-app-dev .
    docker run -p 8080:8080 -p 35729:35729 -v $(pwd):/app modern-web-app-dev
+   # docker run -p 8080:8080 -p 35729:35729 -v $(PWS):/app modern-web-app-dev ## On windows
    ```
 
 #### Development Docker Features
