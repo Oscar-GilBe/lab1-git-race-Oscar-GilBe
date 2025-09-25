@@ -18,24 +18,30 @@
     />
   </head>
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand d-flex align-items-center" href="/">
           <img src="/assets/logo.svg" alt="Logo" class="me-2 navbar-logo" />
-          Modern Web App
+          <span class="fw-bold">Modern Web App</span>
         </a>
-        <div class="navbar-nav ms-auto">
+
+        <div class="navbar-nav ms-auto d-flex align-items-center gap-2">
+          <a th:href="@{/home}" class="btn btn-light me-2">Home</a>
+
           <a th:href="@{'/history/' + ${username}}" class="btn btn-info"
             >My History</a
           >
 
-          <div th:if="${role} == 'ADMIN'">
+          <div th:if="${role} == 'ADMIN'" class="d-flex gap-2">
             <a th:href="@{/history/all}" class="btn btn-warning"
               >All Users History</a
             >
+            <a th:href="@{/statistics}" class="btn btn-success active"
+              >📊 Statistics</a
+            >
           </div>
 
-          <a th:href="@{/logout}" class="nav-link">Logout</a>
+          <a th:href="@{/logout}" class="btn btn-outline-light">Logout</a>
         </div>
       </div>
     </nav>
