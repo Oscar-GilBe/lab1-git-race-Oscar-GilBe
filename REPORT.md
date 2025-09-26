@@ -134,18 +134,23 @@ All controllers are implemented in both REST and MVC versions, allowing the appl
 ## Technical Decisions
 
 - **BCrypt for Password Encryption**
+
   We use BCrypt to securely hash user passwords before storing them in the database. This hashing method has been used in previous subjects and provides strong protection against password attacks.
 
 - **Bucket4j + Caffeine for API Rate Limiting**
+
   We implement API rate limiting using Bucket4j to restrict each IP to a maximum of 5 requests per minute. Caffeine cache is used to efficiently store the IP-to-bucket mapping, preventing memory growth and ensuring scalability.
 
 - **Mockito with JUnit for Testing**
+
   For unit and integration testing, we use Mockito to mock dependencies and JUnit to structure and run tests. This allows us to test controllers and services in isolation and verify their behavior reliably.
 
 - **Session-based authentication**
+
   Another technical decision we made was to implement session-based authentication instead of using JWT or token-based systems. By storing the username and role directly in the server-side session, we simplified access control for both web pages and REST endpoints, enabling role-based restrictions (e.g., ADMIN-only access to statistics) while keeping the authentication flow straightforward and secure.
 
 - **H2 databases**
+
   We use H2 in-memory and file-based databases for different environments. During testing, H2 runs entirely in memory to ensure fast, isolated, and reproducible test execution, while in development and local runs it persists to disk so that user and greeting history data is retained between sessions.
 
 ---
