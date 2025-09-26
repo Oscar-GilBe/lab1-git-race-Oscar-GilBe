@@ -14,6 +14,7 @@ services:
       # Volume mount for live reloading and development
       # Changes to source code automatically trigger application restart
       - .:/app
+      - ./data:/data
     environment:
       - SPRING_PROFILES_ACTIVE=dev
       # Enable Spring Boot DevTools for development

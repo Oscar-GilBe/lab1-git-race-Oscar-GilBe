@@ -21,3 +21,6 @@ gradle-app.setting
 
 # Kotlin sessions
 .kotlin/
+
+# H2 database
+data/
