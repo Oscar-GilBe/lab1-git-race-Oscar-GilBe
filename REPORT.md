@@ -121,7 +121,7 @@ All controllers are implemented in both REST and MVC versions, allowing the appl
 
 ###### Statistics
 
-- `GET /api/statistics` - Returns JSON statistics (ADMIN only)
+- `GET /api/statistics` - Returns JSON statistics
 
 ###### Monitoring Endpoints
 

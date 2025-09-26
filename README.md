@@ -109,22 +109,98 @@ Run specific test classes:
 
 ### REST API Endpoints
 #### Greeting
-- `GET /api/hello` - Returns JSON greeting with timestamp
+- `GET /api/hello` - Returns a default JSON greeting with timestamp
+```
+curl.exe -X GET "http://localhost:8080/api/hello"
+
+Response:
+
+{"message":"Good Afternoon, World!","timestamp":"2025-09-26T14:39:45.734176962Z"}
+```
+
 - `GET /api/hello?name={name}` - Returns personalized JSON greeting
+```
+curl.exe -X GET "http://localhost:8080/api/hello?name=pepe"
+
+Response:
+
+{"message":"Good Afternoon, pepe!","timestamp":"2025-09-26T14:56:39.522561944Z"}
+```
 
 #### Greeting History
 - `GET /api/history` - Returns all greeting histories
+```
+curl.exe -X GET "http://localhost:8080/api/history"
+
+(summary) Response:
+
+[{"id":1,"message":"Good Afternoon, World!","timestamp":"26-09-2025 16:39:45","username":null},{"id":2,"message":"Good Afternoon, oscar!","timestamp":"26-09-2025 16:54:31","username":"oscar"},
+...
+,{"id":38,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:56:39","username":"pepe"}]
+```
+
 - `GET /api/history/{username}` - Returns greeting history for a user
+```
+curl.exe -X GET "http://localhost:8080/api/history/pepe"
+
+Response:
+
+[{"id":24,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:55:28","username":"pepe"},{"id":25,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:55:30","username":"pepe"},{"id":26,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:55:30","username":"pepe"},{"id":27,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:55:30","username":"pepe"},{"id":28,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:55:34","username":"pepe"},{"id":38,"message":"Good Afternoon, pepe!","timestamp":"26-09-2025 16:56:39","username":"pepe"}]
+```
 
 #### Users
 - `POST /api/users` - Create a new user
+```
+curl.exe -X POST "http://localhost:8080/api/users" -H "Content-Type: application/x-www-form-urlencoded" -d "username=mario&password=secret&role=USER"
+
+Response:
+
+{"id":6,"username":"mario","role":"USER"}
+```
+
 - `POST /api/users/login` - Authenticate a user
+```
+curl.exe -X POST "http://localhost:8080/api/users/login" -H "Content-Type: application/x-www-form-urlencoded" -d "username=mario&password=secret"
+
+Response:
+
+Login successful
+```
+
 - `GET /api/users/{username}` - Get a user by username
+```
+curl.exe -X GET "http://localhost:8080/api/users/mario"
+
+Response:
+
+{"id":6,"username":"mario","role":"USER"}
+```
+
 - `GET /api/users` - List all users
+```
+curl.exe -X GET "http://localhost:8080/api/users"
+
+Response:
+
+[{"id":1,"username":"oscar","role":"USER"},{"id":2,"username":"admin","role":"ADMIN"},{"id":3,"username":"pepe","role":"ADMIN"},{"id":4,"username":"paco","role":"USER"},{"id":5,"username":"miguel","role":"USER"},{"id":6,"username":"mario","role":"USER"}]
+```
+
 - `DELETE /api/users/{username}` - Delete a user
+```
+curl.exe -X DELETE "http://localhost:8080/api/users/mario"
+
+This request does not return a response
+```
 
 #### Statistics
-- `GET /api/statistics` - Returns JSON statistics (ADMIN only)
+- `GET /api/statistics` - Returns JSON statistics
+```
+curl.exe -X GET "http://localhost:8080/api/statistics"
+
+Response:
+{"totalUsers":5,"totalGreetings":39,"top3Names":[{"first":"oscar","second":14},{"first":"admin","second":10},{"first":"paco","second":8}]}
+
+```
 
 ### Monitoring Endpoints
 - `GET /actuator/health` - Application health status
@@ -136,6 +212,9 @@ Run specific test classes:
 - **API Testing**: Test REST endpoints with real-time request/response display
 - **Health Check Testing**: Monitor application health status
 - **Live Reload**: Spring Boot DevTools automatically reloads on file changes
+
+## Architecture
+In the application, we follow the MVC (Model-View-Controller) pattern to separate concerns and organize the code efficiently. Controllers handle HTTP requests, process input, and delegate business logic to services. Services contain the core application logic and interact with repositories, which manage data persistence via entities mapped to the database using JPA. To safely expose data to the client or views, DTOs (Data Transfer Objects) are used to transfer only the necessary information, ensuring encapsulation and avoiding leaking internal entity details. This structure allows controllers to focus on request handling, services on business rules, and repositories on data access, creating a clean and maintainable architecture.
 
 ## 🏗️ Project Structure
 
@@ -229,7 +308,33 @@ app.message=Welcome to the Modern Web App!
 
 # Actuator endpoints
 management.endpoints.web.exposure.include=health,info,metrics
+
+# H2 Database Configuration
+spring.datasource.url=jdbc:h2:file:./data/greetingdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.h2.console.settings.web-allow-others=true
+
+# JPA/Hibernate
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.jdbc.time_zone=UTC
 ```
+About H2 database configuratiom:
+The database is stored on the local filesystem (./data/greetingdb).
+The H2 console is accessible at http://localhost:8080/h2-console, allowing SQL queries and inspection of persisted data.
+
+About JPA/Hibernate configuratiom:
+ddl-auto=update: Automatically creates/updates database schema based on entities.
+show-sql and format_sql: Print executed SQL queries in the logs.
+hibernate.jdbc.time_zone=UTC: Ensures timestamps are stored consistently in UTC.
+
+Moreover, application logs include detailed Hibernate SQL queries and parameter bindings for debugging.
 
 ## 🐳 Docker Details
 
