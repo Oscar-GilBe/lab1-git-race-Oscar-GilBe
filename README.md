@@ -9,6 +9,7 @@ A modern Spring Boot application built with Kotlin, featuring a responsive web i
 - **Role-Based Access Control**: USER and ADMIN roles with restricted access
 - **Greeting System**: Personalized greetings depending on the time of day
 - **Greeting History**: Track and view greetings (own history or all histories for ADMIN)
+- **Statistics Dashboard**: Top 3 most popular greeted names, total number of registered users and total number of greetings made. Accessible only by ADMIN users. Available as a web dashboard and a REST API
 - **Session Handling**: Secure session management for web pages
 - **Responsive UI**: Bootstrap 5.3.3 with modern design
 - **REST API**: JSON endpoints for greetings, histories, and users
@@ -103,6 +104,7 @@ Run specific test classes:
 - `GET /home` - Home page (requires login)
 - `GET /history/{username}` - View own greeting history (or others if ADMIN)
 - `GET /history/all` - View all histories (ADMIN only)
+- `GET /statistics` - View statistics dashboard (ADMIN only)
 - `GET /logout` - Logout
 
 ### REST API Endpoints
@@ -111,7 +113,7 @@ Run specific test classes:
 - `GET /api/hello?name={name}` - Returns personalized JSON greeting
 
 #### Greeting History
-- `GET /api/history` - Returns all greeting histories (ADMIN only)
+- `GET /api/history` - Returns all greeting histories
 - `GET /api/history/{username}` - Returns greeting history for a user
 
 #### Users
@@ -120,6 +122,9 @@ Run specific test classes:
 - `GET /api/users/{username}` - Get a user by username
 - `GET /api/users` - List all users
 - `DELETE /api/users/{username}` - Delete a user
+
+#### Statistics
+- `GET /api/statistics` - Returns JSON statistics (ADMIN only)
 
 ### Monitoring Endpoints
 - `GET /actuator/health` - Application health status
@@ -148,10 +153,12 @@ src
 │   │   ├── delivery
 │   │   │   ├── DTO
 │   │   │   │   ├── GreetingHistoryDTO.kt
+│   │   │   │   ├── StatisticsDTO.kt
 │   │   │   │   └── UserDTO.kt
 │   │   │   └── controller
 │   │   │       ├── GreetingHistoryController.kt
 │   │   │       ├── HelloController.kt                                        # Web and API controllers
+│   │   │       ├── StatisticsController.kt
 │   │   │       └── UserController.kt
 │   │   ├── repository
 │   │   │   ├── GreetingHistoryRepository.kt
@@ -161,11 +168,12 @@ src
 │   │   │       └── User.kt
 │   │   └── service
 │   │       ├── GreetingService.kt
+│   │       ├── StatisticsService.kt
 │   │       └── UserService.kt
 │   └── resources
 │       ├── META-INF
 │       │   └── additional-spring-configuration-metadata.json
-│       ├── application.properties                                           # Application configuration
+│       ├── application.properties                                          # Application configuration
 │       ├── public
 │       │   └── assets
 │       │       └── logo.svg                                                 # Application logo
@@ -175,16 +183,18 @@ src
 │       │   └── js
 │       │       └── http-debug.js
 │       └── templates
-│           ├── history.html                                                 # Thymeleaf template
+│           ├── history.html                                                  # Thymeleaf template
 │           ├── home.html
 │           ├── login.html
 │           ├── register.html
+│           ├── statistics.html
 │           └── welcome.html
 └── test
     ├── kotlin
     │   ├── GreetingServiceTest.kt
-    │   ├── IntegrationTest.kt                                               # Integration tests
+    │   ├── IntegrationTest.kt                                                # Integration tests
     │   ├── RateLimitFilterMVCTests.kt
+    │   ├── StatisticsServiceTest.kt
     │   ├── UserServiceTest.kt
     │   └── controller
     │       ├── AuthPageControllerMVCTests.kt
@@ -193,14 +203,16 @@ src
     │       ├── GreetingHistoryControllerUnitTests.kt
     │       ├── GreetingHistoryPageControllerMVCTests.kt
     │       ├── GreetingHistoryPageControllerUnitTests.kt
-    │       ├── HelloControllerMVCTests.kt                                    # MVC tests
-    │       ├── HelloControllerUnitTests.kt                                   # Unit tests
+    │       ├── HelloControllerMVCTests.kt                                     # MVC tests
+    │       ├── HelloControllerUnitTests.kt                                    # Unit tests
+    │       ├── StatisticsControllerMVCTests.kt
+    │       ├── StatisticsControllerUnitTests.kt
     │       ├── UserControllerMVCTests.kt
     │       └── UserControllerUnitTests.kt
     └── resources
-        └── application-test.properties                                       # Application configuration for Github Action Tests
+        └── application-test.properties                      # Application configuration for Github Action Tests
 
-24 directories, 40 files
+24 directories, 47 files
 ```
 
 ## ⚙️ Configuration
